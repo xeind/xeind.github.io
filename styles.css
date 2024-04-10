@@ -1,0 +1,378 @@
+/* Fonts */
+@font-face {
+  font-family: "Geist-Regular";
+  src: url(assets/fonts/Geist-Regular.woff2) format("woff2"),
+    url(assets/fonts/Geist-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Geist Mono-Regular";
+  src: url(assets/fonts/GeistMono-Regular.woff2) format("woff2"),
+    url(assets/fonts/GeistMono-Regular.woff) format("woff");
+}
+
+@media (max-width: 600px) {
+  #profile {
+    flex-direction: column;
+  }
+  .schools li {
+    flex-direction: column;
+  }
+  .hobbies-list {
+    flex-direction: column;
+  }
+}
+
+/* Defaults */
+body {
+    background-image: url("assets/background/bg-lines.svg");
+  font-family: "Geist-Regular", sans-serif;
+  font-size: 1.25rem;
+  background-color: #f4f5f7;
+  background-attachment: fixed;
+  background-position: -.5rem 0;
+  height: 100vh;
+  color: #02171f;
+  user-select: none;
+  background-repeat: repeat;
+}
+
+.mono {
+  font-family: "Geist Mono-Regular", monospace;
+}
+
+.container {
+  padding-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* NavBar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.logo svg {
+  height: 72px;
+  width: 72px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo svg:hover {
+  transform: rotate(90deg);
+}
+
+.links a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  transition: color 0.2s ease-in-out;
+}
+
+.links a:hover {
+  color: #de9e36;
+}
+
+.links a.active {
+  color: #de9e36;
+  font-weight: bold;
+}
+
+.highlight-this {
+  color: #02171f;
+  transition: color 0.2s ease-in-out;
+}
+
+.highlight-this:hover {
+  color: #de9e36;
+}
+
+/* Main sections  */
+#whoami,
+#skills,
+#work-with-me,
+#call-to-action,
+#contact-page,
+#profile,
+#academic-bg,
+#hobbies {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 2.5rem;
+}
+
+#whoami {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #110d2d;
+  font-family: "Geist Mono-Regular", monospace;
+  font-size: 1.25rem;
+}
+
+#skills {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.6rem auto 2.6rem;
+}
+
+#work-with-me {
+  padding-bottom: 2rem;
+}
+
+#call-to-action {
+  margin: 2.6rem auto 2.6rem;
+  color: #545559;
+}
+
+#profile {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #110d2d;
+  font-family: "Geist Mono-Regular", monospace;
+  font-size: 1.25rem;
+  margin: 2rem auto 2.5rem;
+}
+
+#profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  pointer-events: none;
+}
+
+#academic-bg {
+  font-family: "Geist Mono-Regular", monospace;
+  color: #545559;
+}
+
+#academic-bg .scholarships,
+#academic-bg .schools {
+  margin: 1.25rem 0;
+}
+
+#academic-bg ul {
+  list-style-type: none;
+}
+
+#hobbies {
+  font-family: "Geist Mono-Regular", monospace;
+  color: #02171f;
+  font-size: 1.05rem;
+}
+
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1.25rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hobbies-list p {
+  text-align: center;
+  display: inline-block;
+  border-radius: 1.5rem;
+  border: 1px solid #d5d5d5;
+  padding: 0.75rem;
+  margin: 0.5rem auto;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.125rem;
+  min-width: 110px;
+  color: #545559;
+  transition: color 0.3s ease-in-out;
+}
+
+.hobbies-list p:hover {
+  color: #de9e36;
+  background-color: #fffff9;
+}
+
+.scholarships {
+  text-align: center;
+  color: #02171f;
+  transition: color 0.3s ease-in-out;
+}
+
+.scholarships:hover {
+  color: #de9e36;
+}
+
+.schools ul {
+  list-style-type: none;
+  color: #02171f;
+}
+
+.schools li {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.schools li div:first-child {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 5px;
+  max-width: 600px;
+  min-width: 600px;
+  padding: 1rem;
+  font-family: "Geist-Regular", sans-serif;
+  font-size: 1.25rem;
+  border-color: #2f2f2f;
+  margin-bottom: 2rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #de9e36;
+}
+
+.contact-form label {
+  font-family: "Geist Mono-Regular", monospace;
+  font-size: 1.25rem;
+}
+.contact-form .send-msg {
+  text-align: center;
+  display: inline-block;
+  border-radius: 1.5rem;
+  border: 1px solid #d5d5d5;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.125rem;
+  color: #545559;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.contact-form .send-msg:hover {
+  color: #de9e36;
+  background-color: #fffff9;
+  box-shadow: 0 0 10px #de9e36;
+}
+
+.send-msg-container {
+  text-align: center;
+}
+
+.section-title {
+  color: #545559;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-text {
+  width: 48%;
+  font-size: 1.05rem;
+  font-family: "Geist Mono-Regular", monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-list {
+  width: 48%;
+  padding: 6px;
+  text-align: center;
+}
+
+.skills-list p {
+  text-align: center;
+  display: inline-block;
+  border-radius: 1.5rem;
+  border: 1px solid #d5d5d5;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.125rem;
+  min-width: 110px;
+  color: #545559;
+  transition: color 0.3s ease-in-out;
+}
+
+.skills-list p:hover {
+  color: #de9e36;
+  background-color: #fffff9;
+}
+
+.contact-me {
+  font-size: 1rem;
+  font-family: "Geist Mono-Regular", monospace;
+}
+
+.contact-btn-container {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+.contact-btn {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.contact-btn:hover {
+  color: #de9e36;
+}
+
+.logo svg .cls-1,
+.logo svg .cls-2,
+.logo svg .cls-3,
+.logo svg .cls-4 {
+  transition: fill 0.3s ease-in-out;
+}
+
+.logo svg:hover .cls-1,
+.logo svg:hover .cls-2,
+.logo svg:hover .cls-3,
+.logo svg:hover .cls-4 {
+  fill: #de9e36;
+}
+
+/* Site settings */
+::selection {
+  background: #1c1d1e;
+  color: #00ff15;
+}
+
+::-moz-selection {
+  background: #1c1d1e;
+  color: #00ff15;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
